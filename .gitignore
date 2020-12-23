@@ -1,0 +1,12 @@
+/bootstrap/compiled.php
+/vendor
+composer.phar
+.env.*.php
+.env.php
+.env
+.htaccess
+.DS_Store
+Thumbs.db
+/app/storage
+/public/error_log
+*.code-workspace
