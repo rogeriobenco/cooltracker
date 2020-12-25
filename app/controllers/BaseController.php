@@ -15,12 +15,14 @@ class BaseController extends Controller {
 		}
 	}
 
-	static function debug($arg, $debug=FALSE){
+	static function debug($arg, $debug=FALSE)
+	{
 		echo '<pre>';
 		print_r($arg);
 		echo '</pre>';
 
-		if($debug){
+		if($debug)
+		{
 			die;
 		}
 	}

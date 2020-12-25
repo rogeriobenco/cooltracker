@@ -22,10 +22,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'cooltracker.com.br',
-			'database'  => 'cooltrac_cooltracker',
-			'username'  => 'cooltrac_cooltra',
-			'password'  => 'Guitar00@2014',
+			'host'      => 'localhost',
+			'database'  => 'homestead',
+			'username'  => 'homestead',
+			'password'  => 'secret',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -13,7 +13,7 @@
 
 App::before(function($request)
 {
-    header('Access-Control-Allow-Origin: *');
+	header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
     header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
     header('Access-Control-Allow-Credentials: true');
@@ -57,14 +57,29 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
-Route::filter('auth.admin', function(){
-    if(Auth::user()->tipo != 'administrador'){
-        if (Request::ajax()){
+/*
+|--------------------------------------------------------------------------
+| Admin Filter
+|--------------------------------------------------------------------------
+|
+|
+|
+|
+*/
+
+Route::filter('auth.admin', function()
+{
+	if(Auth::user()->tipo != 'administrador')
+	{
+		if (Request::ajax())
+		{
             return Response::make('Unauthorized', 401);
-	}else{
-            return Redirect::to('restrito');
-	}
-   } 
+		}
+		else
+		{
+			return Redirect::to('restrito');
+		}
+	} 
 });
 
 /*
@@ -102,6 +117,15 @@ Route::filter('csrf', function()
 	}
 });
 
-App::missing(function($exception){
+/*
+|---------------------------------------------------------------------------
+| Missing
+|---------------------------------------------------------------------------
+|
+|
+*/
+
+App::missing(function($exception)
+{
     return Response::view('erros.missing', array(), 404);
 });

@@ -28,8 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'bencosys.com.br',
-    //'host' => 'smtp.mandrillapp.com', //mandrill
+	'host' => 'smtp.mailgun.org',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -42,7 +41,7 @@ return array(
 	|
 	*/
 
-	'port' => 465,
+	'port' => 587,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -68,7 +67,7 @@ return array(
 	|
 	*/
 
-	'encryption' => 'ssl',
+	'encryption' => 'tls',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -81,8 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'rastreio@cooltracker.com.br',
-    //'username' => 'rogeriobenco@gmail.com', //mandrill
+	'username' => null,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -95,8 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'Guitar00@2014',
-    //'password' => 'FwT3dzVN1AKpfGjSVoTEmg', //mandrill
+	'password' => null,
 
 	/*
 	|--------------------------------------------------------------------------

@@ -17,17 +17,19 @@ Route::controller('correios', 'CorreiosController');
 Route::controller('usuarios', 'UserController');
 Route::controller('login', 'LoginController');
 
-Event::listen('illuminate.query', function() {
-    //print_r(func_get_args());
-    //exit();
-});
+/*Route::get('/', function()
+{
+	return View::make('hello');
+});*/
 
 //Utiliza o filtro 'auth' e redireciona para o login caso o usuario não esteja logado
-Route::group(array('before' => 'auth'), function(){
+Route::group(array('before' => 'auth'), function()
+{
     Route::get('sair', 'LoginController@sair');
     Route::get('restrito', 'HomeController@restrito');
     
-    Route::group(array('before' => 'auth.admin'), function(){
+	Route::group(array('before' => 'auth.admin'), function()
+	{
         //Route::controller('usuario', 'UserController');
     });
     

@@ -11,5 +11,3 @@
 |
 */
 
-Artisan::add(new Tarefas);
-

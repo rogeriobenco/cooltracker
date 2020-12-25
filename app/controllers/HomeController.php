@@ -19,9 +19,10 @@ class HomeController extends BaseController {
 	{
 		return View::make('hello');
 	}
-        
-        public function restrito(){
-            return View::make('restrito.index');
-        }
+
+	public function restrito()
+	{
+		return View::make('restrito.index');
+	}
 
 }

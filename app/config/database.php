@@ -54,12 +54,12 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'cooltracker.com.br',
-			'database'  => 'bencos62_cooltracker',
-			'username'  => 'bencos62_cooltra',
-			'password'  => 'Guitar00@2014',
+			'host'      => '172.17.0.1',
+			'database'  => 'cooltracker',
+			'username'  => 'cooltracker',
+			'password'  => 'Cooltracker@2020',
 			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
+			'collation' => 'utf8_general_ci',
 			'prefix'    => '',
 		),
 
