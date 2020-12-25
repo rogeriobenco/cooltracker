@@ -252,10 +252,10 @@ class CorreiosController extends BaseController {
                     if(! is_array($rcpto))
                         $rcpto = array($rcpto);
 
-                    Mail::send('emails.rastreio', $data, function($message) use ($user, $rcpto){
-                        $message->from('rastreio@cooltracker.com.br', 'Rastreio - Cooltracker');
-                        $message->to($rcpto)->subject('Novidades sobre sua encomenda!! ' . date('d/m/Y H:i:s'));
-                    });
+                    #Mail::send('emails.rastreio', $data, function($message) use ($user, $rcpto){
+                    #    $message->from('rastreio@cooltracker.com.br', 'Rastreio - Cooltracker');
+                    #    $message->to($rcpto)->subject('Novidades sobre sua encomenda!! ' . date('d/m/Y H:i:s'));
+                    #});
 
                     //ENVIO DA NOTIFICACAO///////////////
                     BaseController::debug('Notificacao');
